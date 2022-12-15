@@ -22,6 +22,7 @@ body {
 .page-container {
     display: grid;
     grid-template-columns: minmax(200px, 1fr) minmax(200px, 5fr);
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -86,12 +87,12 @@ li {
     margin-right: 1rem;
 }
 
-.find > img:first-of-type{
+.find>img:first-of-type {
     margin-right: 1rem;
 }
 
 .find,
-.person > *{
+.person>* {
     height: 24px;
 }
 
@@ -104,12 +105,12 @@ li {
     padding-right: 2vw;
 }
 
-.person > *{
+.person>* {
     margin-left: 2rem;
     display: inline-block;
 }
 
-.person > img:last-of-type {
+.person>img:last-of-type {
     height: 35px;
     width: 37.5px;
     border-radius: 100%;
@@ -186,22 +187,22 @@ li {
 
 .project-section,
 .announcements-section,
-.trending{
+.trending {
     margin: 1rem;
 }
 
-.project-section{
+.project-section {
     margin-left: 1.5rem;
 }
 
-.project-section > h3,
-.announcements-section > h3,
-.trending > h3{
+.project-section>h3,
+.announcements-section>h3,
+.trending>h3 {
     margin: 1rem 0;
 }
 
 .announcements-section,
-.trending{
+.trending {
     margin-right: 2rem;
 }
 
@@ -221,16 +222,17 @@ li {
     justify-content: flex-start;
 }
 
-.card-text{
+.card-text {
     padding: 2rem 4rem 3rem 2rem;
 }
 
-.card-text > h4{
+.card-text>h4 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.25rem;
 }
-.card-text > p{
+
+.card-text>p {
     font-size: 1.025rem;
 }
 
@@ -240,13 +242,13 @@ li {
     padding: 0 2rem 2rem 0;
 }
 
-.logo-row > li{
+.logo-row>li {
     padding-left: 1rem;
 }
 
-.side-section{
-display: flex;
-flex-direction: column;
+.side-section {
+    display: flex;
+    flex-direction: column;
 }
 
 .announcements-section {
@@ -288,11 +290,22 @@ flex-direction: column;
     align-items: center;
 }
 
-.trending-accounts > img{
+.trending-accounts>img {
     width: 50px;
     border-radius: 100%;
 }
 
-.trending-accounts > div{
+.trending-accounts>div {
     padding-left: 1rem;
+}
+
+@media only screen and (max-width: 860px) {
+    .main {
+        grid-column: 2/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        background-color: var(--main-background-color);
+        padding-bottom: 100px;
+    }
 }
